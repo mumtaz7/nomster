@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Graduate');
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -27,4 +30,9 @@ body {
   background:url('/assets/concrete_wall.png');
   border-radius: 0;
   box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #3ABAAD;
+  font-family: 'Graduate', cursive;
 }
