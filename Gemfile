@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 gem 'rails_12factor', group: :production
 
+gem "geocoder", "1.3.4"
+
+gem "figaro", ">= 1.0.0"
+
 gem 'will_paginate', '~> 3.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
