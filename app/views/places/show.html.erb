@@ -3,10 +3,9 @@
   <i><%= @place.address %></i>
   <br/><br/>
   <p><%= @place.description %></p>
-
+<br />
 </head>
   <body>
-
 
 <% if @place.latitude.present? && @place.longitude.present? %>
 
@@ -83,6 +82,7 @@
   <blockquote>
     <% if comment.humanized_rating.present? %>
       <b><%= comment.humanized_rating %></b> -
+      <br />
       <% end %>
     <%= comment.message %>
     <small><%= comment.user.email %></small>
@@ -121,9 +121,11 @@
 <div class="booyah-box col-xs-10 col-xs-offset-1">
   <h1>Photos</h1>
 
-<% @place.photos.each do |photo| %>
-<%= image_tag photo.picture %></b> -
+  <% @place.photos.each do |photo| %>
+  <%= image_tag photo.picture %></b> -
+  <br />
   <%= photo.caption %>
+  <br />
     </div>
   <% end %>
 <% end %>
