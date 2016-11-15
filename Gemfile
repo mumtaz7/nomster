@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
+
 gem 'rails_12factor', group: :production
 
 gem "geocoder", "1.3.4"
