@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 
 gem "fog"
 
-gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
+gem "fog-aws"
+
+gem 'carrierwave', '0.11.2'
 
 gem 'rails_12factor', group: :production
 
