@@ -17,9 +17,20 @@
         <%= place.comments.order(:id).last.message %>
         <small><%= place.comments.last.user.email %></small>
       </blockquote>
-    </div>
     <% end %>
-  </div>
+
+  <% if place.photos.present? %>
+  
+    <div class="col-xs-12">
+       <% if place.photos.last.picture.present? %>
+          <b><%= image_tag place.photos.last.picture, :class => 'img-responsive' %></b>
+       <% end %>
+       <%= place.photos.last.caption %>
+       <% end %>
+        
+    </div>
+
+
 <% end %>
 
 <%= will_paginate @places, :page_links => false %>
