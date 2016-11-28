@@ -44,8 +44,6 @@
     <p><%= place.description %></p><br />
 
     <% if place.user.present? %>
-    <br />
-    <br />
       <small><%= place.user.email %></small>
     <% end %>
 
@@ -56,8 +54,6 @@
           <b><%= place.comments.order(:id).last.humanized_rating %></b> -
         <% end %>
         <%= place.comments.order(:id).last.message %>
-        <br />
-        <br />
         <small><%= place.comments.last.user.email %></small>
       </blockquote>
     <% end %>
