@@ -45,34 +45,34 @@
     <p><%= place.description %></p><br />
 
 
-<% if place.comments.present? %>
-    <div class="col-xs-12">
-      <blockquote>
-        <% if place.comments.order(:id).last.humanized_rating.present? %>
-          <b><%= place.comments.order(:id).last.humanized_rating %></b> -
-        <% end %>
-        <%= place.comments.order(:id).last.message %>
-        <small><%= place.comments.last.user.email %></small>
-      </blockquote>
+    <% if place.comments.present? %>
+      <div class="col-xs-12">
+        <blockquote>
+          <% if place.comments.order(:id).last.humanized_rating.present? %>
+            <b><%= place.comments.order(:id).last.humanized_rating %></b> -
+          <% end %>
+          <%= place.comments.order(:id).last.message %>
+          <small><%= place.comments.last.user.email %></small>
+        </blockquote>
+      </div>
     <% end %>
 
 
-  <% if place.photos.present? %>
-    <div class="col-xs-6">
-       <% if place.photos.last.picture.present? %>
-          <b><%= image_tag place.photos.last.picture, :class => 'img-responsive' %></b>
-       <% end %>
-       <%= place.photos.last.caption %>
-       <% end %>
+    <% if place.photos.present? %>
+      <div class="col-xs-6">
+         <% if place.photos.last.picture.present? %>
+            <b><%= image_tag place.photos.last.picture, :class => 'img-responsive' %></b>
+         <% end %>
+         <%= place.photos.last.caption %>
+       </div>
+    <% end %>
+            
         
-    </div>
-        <br class="clear" />
-      <% if place.user.present? %>
+    <br class="clear" />
+    <% if place.user.present? %>
       <small><%= place.user.email %></small>
     <% end %>
+
   </div>
-</div>
-
 <% end %>
-
 <%= will_paginate @places, :page_links => false %>
